@@ -13,3 +13,7 @@ Copy/Paste the following commands:
 - mkdir -p ~/catkin_ws/src (Here I named my workspace catkin_ws, you can choose it to whatever you want)
 - cd ~/catkin_ws/
 - catkin_make
+
+Now you've created a workspace to put your arm package in. 
+
+- #### 2 - Download the arm package
