@@ -9,11 +9,21 @@ Start by simulating the robot arm on your device. To do that, you need to follow
 
 Copy/Paste the following commands: 
   
-- source /opt/ros/noetic/setup.bash 
-- mkdir -p ~/catkin_ws/src (Here I named my workspace catkin_ws, you can choose it to whatever you want)
-- cd ~/catkin_ws/
-- catkin_make
+- $ source /opt/ros/noetic/setup.bash 
+- $ mkdir -p ~/catkin_ws/src (Here I named my workspace catkin_ws, you can choose it to whatever you want)
+- $ cd ~/catkin_ws/
+- $ catkin_make
 
 Now you've created a workspace to put your arm package in. 
 
-- #### 2 - Download the arm package
+- #### 2 - Download the arm package: 
+
+- $ git clone https://github.com/smart-methods/arduino_robot_arm.git  
+
+the go to the catkin workspace you created by: $ cd ~/catkin_ws to install ROS dependencies: 
+- $ rosdep install --from-paths src --ignore-src -r -y
+- $ sudo apt-get install ros-noetic-moveit
+- $ sudo apt-get install ros-noetic-joint-state-publisher ros-noetic-joint-state-publisher-gui
+- $ sudo apt-get install ros-noetic-gazebo-ros-control joint-state-publisher
+- $ sudo apt-get install ros-noetic-ros-controllers ros-noetic-ros-control
+- $ sudo nano ~/.bashrc 
